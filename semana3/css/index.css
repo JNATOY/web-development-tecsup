@@ -1,8 +1,10 @@
+@import './modules/variables/variable.css';
+
 .body {
     margin: 0;
-    background-color: #16181d;
-    color: white;
-    font-family: monospace;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
   }
   
   .header {
@@ -65,7 +67,7 @@
     height: 256px;
     border-radius: 50%;
     /* box-shadow: -0.25rem -0.25rem 1rem 0.25rem #149eca, 0.25rem 5px 1rem 0.25rem #388f7f; */
-    box-shadow: -0.25rem -0.25rem 1rem 0.25rem rgba(241, 243, 245, 0.8), 0.25rem 5px 1rem 0.25rem rgba(138, 52, 150, 0.8);
+    box-shadow: -0.25rem -0.25rem 1rem 0.25rem rgba(241, 243, 245, 0.8), 0.25rem 5px 1rem 0.25rem var(--primary-main-color);
   }
   
   @media (min-width: 768px) {
@@ -207,7 +209,7 @@
     padding: 0.5em 2em;
     border: none;
     border-radius: 1rem;
-    background-color: #940a818e;
+    background-color: var(--primary-main-color);
     color: white;
     font-family: monospace;
     font-size: 0.75rem;
@@ -219,8 +221,8 @@
   
   .button:hover {
     box-shadow:
-      0 0 0.125rem 0.0625rem #5e0859,
-      0 0 0.25rem 0.125rem #970a6d;
+      0 0 0.125rem 0.0625rem var(--primary-main-color),
+      0 0 0.25rem 0.125rem var(--primary-main-color);
     filter: brightness(1.125);
   }
   
@@ -291,6 +293,10 @@
   
   .gap-md {
     gap: 2rem;
+  }
+
+  .bg-secondary {
+    background-color: var(--secondary-background-color);
   }
   
   .color-primary {
