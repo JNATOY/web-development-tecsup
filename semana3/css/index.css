@@ -1,4 +1,17 @@
-@import './modules/variables/variable.css';
+:root{
+  --primary-main-color: #8a3496cc;
+  --primary-background-color: #16181d;
+  --secondary-background-color: #2b303b;
+  --primary-font-family: monospace;
+  --primary-text-color: white;
+  --primary-spacing: 1.5rem;
+   }
+
+  @media (min-width: 768px) {
+    :root {
+      --primary-spacing: 2rem;
+    }
+  }
 
 .body {
     margin: 0;
