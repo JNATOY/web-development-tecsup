@@ -1,0 +1,244 @@
+.body {
+    margin: 0;
+    background-color: #16181d;
+    color: white;
+    font-family: monospace;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #16181d;
+    box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.5);  }
+  
+  .nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .container {
+    max-width: 1024px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: auto;
+  }
+  
+  .img {
+    display: block;
+  }
+  
+  .img--logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  
+  .list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.25s color;
+  }
+  
+  .link:hover {
+    color: #149eca;
+  }
+  
+  .flexbox {
+    display: flex;
+  }
+  
+  .flexbox--header {
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .gap-xs {
+    gap: 1rem;
+  }
+  
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* posible .hero
+  .hero {
+    min-height: 100vh;
+    background-image: linear-gradient(xxxx), url('https://i.postimg.cc/x9MyhM3D/react-system.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  } */
+  
+  .g-layout {
+    display: grid;
+  }
+  
+  .g-layout--1-1 {
+    grid-template-columns: 1fr;
+  }
+
+@media (min-width: 768px) {
+  .g-layout--1-1{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.d-flex {
+  display: flex;
+}
+
+.gap-xs {
+  gap: 1rem;
+}
+
+.color-primary {
+
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #0fa,
+  0 0 82px #0fa,
+  0 0 92px #0fa,
+  0 0 102px #0fa,
+  0 0 151px #0fa;
+}
+
+.d-none {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .md\:d-block {
+    display: block;
+  }
+}
+.icon {
+  display: flex;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.icon i {
+  display: flex;
+}
+
+.  {
+  display: flex;
+  padding: 0.5em 2em;
+  border: none;
+  border-radius: 1rem;
+  background-color: #149eca;
+  color: white;
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 0.25s, filter 0.25s;
+}
+.gap-md {
+  gap: 2rem;
+}
+.gap-sm {
+  gap: 1.5rem;
+}
+.g-layout--center {
+  align-items: center;
+  justify-items: center;
+}
+.button:hover {
+  box-shadow:
+    0 0 0.125rem 0.0625rem #149eca,
+    0 0 0.25rem 0.125rem #149eca;
+  filter: brightness(1.125);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.75rem;
+}
+.card {
+  max-width: 512px;
+}
+@media (min-width: 768px) {
+  .img--hero 
+    width: 320px;
+    height: 320px;
+  }
+  .img--hero {
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    /* box-shadow: -0.25rem -0.25rem 1rem 0.25rem #149eca, 0.25rem 5px 1rem 0.25rem #388f7f; */
+    box-shadow:  0 0 7px #fff,
+    0 0 1px #fff,
+    0 0 3px #fff,
+    0 0 5px #0fa,
+    0 0 10px #0fa,
+    0 0 25px #0fa,
+    0 0 30px #0fa,
+    0 0 50px #0fa;
+  }
+  @media (min-width: 768px) {
+    .button {
+      font-size: 1rem;
+    }
+  }
+  .button {
+    display: flex;
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 1rem;
+    background-color: #149eca;
+    color: white;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 0.25s, filter 0.25s;
+  }
+  @media (min-width: 768px) {
+    .icon {
+      font-size: 1.5rem;
+    }
+  }
+  .card__text {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .card__title--lg {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .card__body {
+      gap: 1rem;
+    }
+  }

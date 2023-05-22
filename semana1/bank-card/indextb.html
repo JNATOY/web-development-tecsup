@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarjeta de banco</title>
+</head>
+<body>
+  <h1>Tarjeta de Banco</h1>
+
+  <script>
+                                                // primer  ejercicio 
+
+    // BCP 455786 && Interbank 421355 && BBVA 455103
+     // alert('Bienvenidos al Banco Estofador');
+     // let cardNumber = prompt('Por favor ingrese sus primeros seis dígitos');
+     // if (cardNumber == '455103') {
+     //  alert('Su tarjeta es de BBVA');
+     // } else if (cardNumber == '421355') {
+     //  alert('Su tarjeta es de Interbank');
+     // } else if (cardNumber == '455788') {
+     //  alert('Su tarjeta es de BCP');
+     // } else {
+     //  alert('No trabajamos con su banco');
+     // }
+
+                                             // segundo ejercicio 
+
+     //let basededatos = {
+      // numerodetarjeta1 : '4557880659142903',
+      // numerodetarjeta2 : '4213550126196894'
+     //};
+     //console.log(basededatos);
+     //console.log(basededatos.numerodetarjeta1);
+
+
+
+                                                 // tercer ejercicio 
+alert('Bienvenido al banco estafador');
+let cardNumber = prompt ('por favor digite los 6 numeros de su tarjeta')
+let validationcard = false;
+switch (cardNumber) {
+    case '455786' :
+      alert('usted es bcp');
+      alert('muchas gracias por ser parte de BCP'); 
+      validationcard = true;
+      break;
+    case '421355':
+        alert('Usted es Interbank');
+        alert('Muchas gracias por ser parte de Intebank');
+        validationcard = true;
+        break;
+    case '455103':
+        alert('Usted es BBVA');
+        alert('Muchas gracias por ser parte de BBVA');
+        break;
+      default:
+        alert('Nosotros no trabajos con su banco');
+        validationcard = true;
+        break;
+    }
+    let databases = {
+      database1: '455786455786',
+      database2: '421355421355',
+      database3: '455103455103',
+    }
+    cardNumber = prompt('ingrese su número de tarjeta completa');
+    if (databases.database1 == cardNumber) {
+      alert('gracias 1')
+    }else if ( databases.database2 ==cardNumber){
+      alert('gracias 2');
+    }else if ( databases.database3 ==cardNumber){
+      alert('gracias 3');
+    }else{
+      alert('no cambio nada')
+    }
+  </script>
+</body>
+
+</html>
