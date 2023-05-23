@@ -10,6 +10,7 @@
   
   .header {
     position: fixed;
+    z-index: 50;
     top: 0;
     left: 0;
     width: 100%;
@@ -22,6 +23,7 @@
     padding-bottom: 1rem;
     --i-menu: 1;
     --i-close: 0;
+    --nav-padding: calc(var(--primary-spacing)/2)
   }
   
   #menu:target {

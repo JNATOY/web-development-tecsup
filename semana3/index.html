@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   <!--aos-->
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -95,7 +96,7 @@
           width="256" height="256" class="img img--hero animate__animated animate__fadeInRight" />
       </div>
     </article>
-    <section class="section" id="services">
+    <section class="section" id="services" data-aos="fade-up">
       <div class="container d-flex f-direction-column gap-md">
         <h2 class="title">Nuestros servicios</h2>
         <div class="g-layout g-layout--1-1-1 gap-sm">
@@ -143,9 +144,9 @@
           </div>
         </div>
     </section>
-    <section class="section bg-secondary" id="projects">
+    <section class="section bg-secondary" id="projects" data-aos="fade-up">
       <div class="container d-flex f-direction-column gap-md">
-        <h2 class="title">Nuestros servicios</h2>
+        <h2 class="title">Proyectos</h2>
         <div class="g-layout g-layout--1-1-1 gap-sm">
           <div class="card">
             <div class="card__body">
@@ -191,50 +192,55 @@
           </div>
         </div>
     </section>
-          <!-- Slider main container -->
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              ...
+          <section class="section" data-aos="fade-up">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="#"">Slide 1</div>
+                <a href="">
+                  <img src="./img/perfil-juan-ñato.webp" alt="" width="200" height="200">
+                </a>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ...
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-          </div>
+          </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-              const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
 
-            // If we need pagination
-            pagination: {
-              el: '.swiper-pagination',
-            },
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
 
-            // Navigation arrows
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
 
-            // And if we need scrollbar
-            scrollbar: {
-              el: '.swiper-scrollbar',
-            },
-          });
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+    AOS.init();
   </script>
 </body>
 </html>
