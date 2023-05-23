@@ -4,7 +4,8 @@
     margin: 0;
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
-    font-family: var(--primary-font-family);
+    font-family: var(--primary-font-family);  
+    
   }
   
   .header {
@@ -92,7 +93,7 @@
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.25s;
+    transition: opacity 0.s;
   }
   
   @media (min-width: 768px) {
@@ -124,6 +125,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;  /*ESTO SE PUSE PORQUE SE HIZO ANIMACION DE LA TARJETA E IMAGEN*/
   }
   
   .hero::before {
