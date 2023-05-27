@@ -1,23 +1,20 @@
 :root {
-  scroll-behavior: smooth;
   --primary-max-width: 512px;
   --primary-spacing: 1.5rem;
-  --primary-main-color: #149eca;
+  --primary-main-color: #087ea4;
+  --primary-warning-color: #a6423a;
   --primary-background-color: #16181d;
   --secondary-background-color: #2b303b;
   --primary-text-color: white;
+  --primary-shadow-color: rgba(255, 255, 255, 0.5);
   --light-primary-shadow-color: rgba(0, 0, 0, 0.5);
   --dark-primary-shadow-color: rgba(255, 255, 255, 0.5);
-  --primary-font-family: "Inconsolata", monospace;
+  --primary-font-family: "Source Code Pro", monospace;
 }
 
 @media (min-width: 768px) {
   :root {
-    --primary-max-width: 1024px;  
+    --primary-max-width: 1024px;
     --primary-spacing: 2rem;
   }
-} 
-
-.body{
-  background-color: red;
 }
