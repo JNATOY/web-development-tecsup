@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animaciones I Las mejores animaciones web del Perú</title>
+  <style>
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .body {
+      margin: 0;
+      background-color: #16181d;
+      color: #f6f7f9;
+    }
+
+    .title {
+      display: block;
+      font-family: monospace;
+      white-space: nowrap;
+      border-right: 0.125rem solid #f6f7f9;
+      width: 6ch;
+      overflow: hidden;
+      animation:
+        typing 2s steps(6),
+        blink 0.5s infinite step-end alternate;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <span class="title">Elliot</span>
+</body>
+
+</html>
