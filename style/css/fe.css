@@ -1,0 +1,59 @@
+:root {
+  --primary-main-color: rgb(24, 177, 57);
+  --primary-background-color: #16181d;
+  --primary-text-color: white;
+  --primary-font-family: monospace;
+  --letter-color-1: dodgerblue;
+  --letter-color-2: crimson;
+  --letter-color-3: coral;
+  --letter-color-4: gold;
+  --letter-color-5: darkmagenta;
+  --letter-color-6: cyan;
+}
+
+.body {
+  margin: 0;
+  background-image: radial-gradient(var(--primary-background-color), var(--primary-main-color));
+  color: var(--primary-text-color);
+  font-family: var(--primary-font-family);
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero__letter:nth-child(1) {
+  color: var(--letter-color-1);
+}
+
+.hero__letter:nth-child(2) {
+  color: var(--letter-color-2);
+}
+
+.hero__letter:nth-child(3) {
+  color: var(--letter-color-3);
+}
+
+.hero__letter:nth-child(4) {
+  color: var(--letter-color-4);
+}
+
+.hero__letter:nth-child(5) {
+  color: var(--letter-color-5);
+}
+
+.hero__letter:nth-child(6) {
+  color: var(--letter-color-6);
+}
+
+/*# sourceMappingURL=fe.css.map */

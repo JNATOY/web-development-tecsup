@@ -1,0 +1,7 @@
+.body {
+    margin: 0;
+    background-image: radial-gradient(var(--primary-background-color), var(--primary-main-color));
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+  }
+  
