@@ -1,24 +1,22 @@
 @keyframes beat {
-    to {
-      transform: scale(1.125);
-    }
+  to {
+    transform: scale(1.125);
   }
+}
 
 :root {
-    scroll-behavior: smooth;
-    --primary-max-width: 512px;
-    --primary-main-spacing: 1.5rem;
-    --primary-main-color: rgb(55, 179, 25);
-    --primary-info-color: #087ea4;
-    --primary-background-color: #16181d;
-    --primary-text-color: white;
-    --letter-color-1: dodgerblue;
-    --letter-color-2: crimson;
-    --letter-color-3: coral;
-    --letter-color-4: gold;
-    --letter-color-5: darkmagenta;
-    --letter-color-6: cyan;
-    --primary-font-family: monospace;arkmagenta;
+  scroll-behavior: smooth;
+  --primary-max-width: 512px;
+  --primary-main-spacing: 1.5rem;
+  --primary-main-color: rgb(39, 153, 24);
+  --primary-info-color: #087ea4;
+  --primary-background-color: #16181d;
+  --primary-text-color: white;
+  --letter-color-1: dodgerblue;
+  --letter-color-2: crimson;
+  --letter-color-3: coral;
+  --letter-color-4: gold;
+  --letter-color-5: darkmagenta;
   --letter-color-6: cyan;
   --primary-font-family: monospace;
 
