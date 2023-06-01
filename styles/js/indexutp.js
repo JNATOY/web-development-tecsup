@@ -1,7 +1,54 @@
-for (let contador = 0; contador < 12; contador++) {
+const firstName = 'juan';
+
+for (const element of firstName) {
+  console.log(element);
+}
+
+
+/* const firstName = 'juan';
+for (const index in firstName) {
+  console.log(firstName[index]);
+}
+ */
+
+/* let response = '';
+do {
+  response = prompt('Desea realizar algún cálculo 1 (Sí) cualquier otra cosa (No)');
+  if (response == 1) {
+    let number1 = +prompt('Número 1');
+    let number2 = +prompt('Número 2');
+    alert(`
+      suma: ${number1 + number2},
+      resta: ${number1 - number2},
+      multiplicación: ${number1 * number2},
+      división: ${number1 / number2},
+    `);
+  }
+} while (response == 1);
+ */
+
+/* let i=0;
+
+while(i<100) {
+  console.log(i+1);
+  i++;
+}
+
+ */
+
+
+/* console.log('1');
+console.log('2');
+console.log('3');
+console.log('4');
+console.log('5');
+ */
+
+
+/* for (let contador = 0; contador < 12; contador++) {
     console.log(12 * (contador + 1));
   }
-
+ */
 
 /* -------------------objetos--------------------- */
 /* const person = {
