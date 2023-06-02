@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nombres aleatorios</title>
+</head>
+
+<body>
+    <h1>Nombres aleatorios</h1>
+    <h2 id="name">Juan Ñato</h2>
+    <button id="newName">Nuevo nombre</button>
+
+    <script>
+        document.getElementById('newName').addEventListener('click', () => {
+      document.getElementById('name').innerText = 'Leo';
+        });
+
+    </script>
+</body>
+
+</html>
