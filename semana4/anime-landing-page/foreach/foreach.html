@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Feliz</title>
+</head>
+
+<body>
+    <h1>numero Feliz</h1>
+
+    <script>
+
+        //  ARRAY FOREACH //
+
+        const heroes = [
+            {
+                id: 1,
+                name: 'Batman',
+                owner: 'DC'
+            },
+            {
+                id: 2,
+                name: 'Spiderman',
+                owner: 'Marvel'
+            },
+            {
+                id: 3,
+                name: 'Superman',
+                owner: 'DC'
+            },
+            {
+                id: 4,
+                name: 'Flash',
+                owner: 'DC'
+            },
+            {
+                id: 5,
+                name: 'Wolverine',
+                owner: 'Marvel'
+            },
+        ];
+
+        heroes.forEach(element => console.log(element.name));
+        console.log(heroes.map(element => `${element.owner}: ${element.name}`));
+        console.log(heroes.filter(element => element.owner === 'DC'));
+        // console.log(heroes.filter(element => {
+        //   return element.owner === 'DC';
+        // }));
+        const total = heroes.reduce(
+            (accumulator, currentValue) => accumulator + currentValue.id,
+            0
+        );
+        console.log(total);
+
+    </script>
+</body>
+
+</html>

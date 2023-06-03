@@ -35,74 +35,97 @@
                 console.log(perro.raza); */
 
 
-        //--------------ARRAYS 
-        /* 
+        //--------------ARRAYS
+        /*
                 const nameList = ['Juan', 'Leo', 'Ñato', 'Alejandra'];
                 console.log(nameList);
                 console.log(nameList[1]);
                 console.log(nameList[3]);
          */
 
-  /*       const perro = {
-            name: 'Doky',
-            age: 12,
-            color: 'white',
-            // "color-primario": 'white',
-            especial: () => {
-                return 'Guaf guaf';
-            }
-        };
-
-        console.log(perro);
-
-        console.log(perro.especial()); */
-/////////tipos de arrays ///////////////
-
-
+        /*       const perro = {
+                  name: 'Doky',
+                  age: 12,
+                  color: 'white',
+                  // "color-primario": 'white',
+                  especial: () => {
+                      return 'Guaf guaf';
+                  }
+              };
+      
+              console.log(perro);
+      
+              console.log(perro.especial()); */
+        /////////tipos de arrays ///////////////
 
 
-      /*   const nameList = ['Elliot', 17, true];
 
-        console.log(nameList.length);
-        console.log(nameList.push('Elvis'));
-        console.log(nameList);
-        console.log(nameList.unshift('Fiorella'));
-        console.log(nameList);
-        console.log(nameList.pop());
-        console.log(nameList);
-        console.log(nameList.shift());
-        console.log(nameList); */
+
+        /*   const nameList = ['Elliot', 17, true];
+  
+          console.log(nameList.length);
+          console.log(nameList.push('Elvis'));
+          console.log(nameList);
+          console.log(nameList.unshift('Fiorella'));
+          console.log(nameList);
+          console.log(nameList.pop());
+          console.log(nameList);
+          console.log(nameList.shift());
+          console.log(nameList); */
 
         //////////////////// slice   //////////
 
-      /*   const task =['despertar', 'programar', 'comer', 'estafar', 'tonear', 'dormir'];
-        const newArray = task.slice(1,4);
-        console.log(newArray);
-        console.log(task); */
+        /*   const task =['despertar', 'programar', 'comer', 'estafar', 'tonear', 'dormir'];
+          const newArray = task.slice(1,4);
+          console.log(newArray);
+          console.log(task); */
 
-     //////////////////// indexof   y lastindexof   //////////
+        //////////////////// indexof   y lastindexof   //////////
 
-     const programmingLanguages = ['HTML', 'CSS', 'JavaScript', 'Python', 'Java', 'C++', 'PHP', 'CSS'];
-    console.log(programmingLanguages);
-    console.log(programmingLanguages.indexOf('CSS'));
-    // console.log(programmingLanguages.indexOf('Go'));
-    console.log(programmingLanguages.lastIndexOf('CSS'));
+        /* const programmingLanguages = ['HTML', 'CSS', 'JavaScript', 'Python', 'Java', 'C++', 'PHP', 'CSS'];
+        console.log(programmingLanguages);
+        console.log(programmingLanguages.indexOf('CSS')); */
+        // console.log(programmingLanguages.indexOf('Go'));
+        /*     console.log(programmingLanguages.lastIndexOf('CSS')); */
 
-       ////////////////////  find , findindex, some, every  //////////
+        ////////////////////  find , findindex, some, every  //////////
 
-    const ages = [18, 27, 24, 26, 19, 26];
-    console.log(ages.find(element => element > 25));
-    console.log(ages.findIndex(element => element > 25));
-    console.log(ages.some(element => element < 15));
-    console.log(ages.every(element => element >= 18));
+        /*     const ages = [18, 27, 24, 26, 19, 26, 101];
+            console.log(programingLanguages);
+            console.log(ages.find(element => element > 25));
+            console.log(ages.findIndex(element => element > 25));
+            console.log(ages.some(element => element < 15));
+            console.log(ages.every(element => element >= 18));
+         */
+        ////////////////////  includes , search  //////////
 
-           ////////////////////  includes , search  //////////
+        /*    console.log(programmingLanguages.includes('Go'));
+            console.log('No somos libres de las que cosas malas que nos pasan, pero si somos libres de responder ante ellas.'.search('libres'));
+            console.log(programmingLanguages[2].search('Java'));
+         */
 
-    console.log(programmingLanguages.includes('Go'));
-    console.log('No somos libres de las que cosas malas que nos pasan, pero si somos libres de responder ante ellas.'.search('libres'));
-    console.log(programmingLanguages[2].search('Java'));
+        ////////////////////  JOIN  //////////
 
+        const nameList = ['Luz', 'Elliot', 17, true, 'Leo', 'Mijael'];
+        console.log(nameList);
+
+        const programmingLanguages = ['HTML', 'CSS', 'JavaScript', 'Python', 'Java', 'C++', 'PHP', 'CSS'];
+        console.log(programmingLanguages);
+
+        const ages = [18, 27, 24, 26, 19, 26, 101];
+        console.log(ages);
+
+        console.log(nameList.join('-'));
+        console.log(nameList.toString());
+        console.log(nameList);
+        console.log(programmingLanguages.sort());
+        console.log(ages.sort((a, b) => a - b));
+        console.log(programmingLanguages);
+        console.log(ages);
+        console.log(nameList.reverse());
+        console.log(nameList);
 
     </script>
 </body>
+
 </html>
