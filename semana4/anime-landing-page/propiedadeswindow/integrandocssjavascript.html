@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Promedio Feliz</title>
+  <style>
+    body {
+      min-height: 200vh;
+    }
+
+    .body {
+      background-color: #16181d;
+    }
+
+    .color-primary {
+      color: #087ea4;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title" id="titleHomepage">Promedio Feliz</h1>
+  <script>
+    // const title = document.getElementById('titleHomepage');
+    // const felicitaciones = () => {
+    //   console.log('¡Felicitaciones tu primer evento en elemento');
+    // };
+
+    // title.addEventListener('click', felicitaciones);
+    // title.addEventListener('dblclick', () => {
+    //   title.removeEventListener('click', felicitaciones);
+    //   console.log('Remover evento');
+    // });
+    // alert('Promedio Feliz');
+
+    const title = document.getElementById('titleHomepage');
+    title.addEventListener('dblclick', () => {
+      title.innerText = `Felicitaciones <span>Elliot</span>`
+    });
+
+    title.addEventListener('click', () => {
+      title.innerHTML = `Felicitaciones <span>Juan Ñato</span>`
+    });
+
+    title.addEventListener('mouseover', () => {
+      title.style.color = '#087ea4';
+    });
+
+    // title.addEventListener('mouseleave', () => {
+    //   title.style.color = 'inherit';
+    // });
+
+    document.addEventListener('scroll', () => {
+      title.classList.add('color-primary');
+      document.body.classList.add('body');
+    });
+
+    // const averageNotes = (n1, n2, n3) => {
+    //   return (n1 + n2 + n3) / 3;
+    // };
+
+    // const courseStatus = (average) => {
+    //   if (average >= 13) {
+    //     return 'aprobado';
+    //   } else {
+    //     return 'desaprobado';
+    //   }
+    // };
+
+    // let response = '1';
+
+    // while (response == '1') {
+    //   let note1 = +prompt('Ingrese nota 1');
+    //   let note2 = +prompt('Ingrese nota 2');
+    //   let note3 = +prompt('Ingrese nota 3');
+
+    //   let average = averageNotes(note1, note2, note3);
+    //   alert(`Promedio final: ${average} usted a ${courseStatus(average)}`);
+
+    //   response = prompt('¿Usted desea promediar más notas? Sí (1) No (Otra tecla)');
+    // }
+  </script>
+</body>
+
+</html>
