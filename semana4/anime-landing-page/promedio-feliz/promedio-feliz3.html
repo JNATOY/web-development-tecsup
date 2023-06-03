@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promedio Feliz</title>
+</head>
+
+<body>
+    <h1>Promedio Feliz</h1>
+    <script>
+
+        //--------------OBJETOS
+
+        /*         const auto = {
+                    ruedas: 4,
+                    puertas: 2,
+                    color: 'gris',
+                };
+        
+                const perro = {
+                    name: 'Doky',
+                    age: 12,
+                    "color-primario": 'white'
+                };
+        
+                console.log(auto);
+                console.log(auto.puertas);
+                console.log(auto['color']);
+                console.log(perro);
+                console.log(perro.name);
+                console.log(perro.age);
+                console.log(perro['color-primario']);
+                console.log(perro.raza); */
+
+
+        //--------------ARRAYS 
+        /* 
+                const nameList = ['Juan', 'Leo', 'Ñato', 'Alejandra'];
+                console.log(nameList);
+                console.log(nameList[1]);
+                console.log(nameList[3]);
+         */
+
+  /*       const perro = {
+            name: 'Doky',
+            age: 12,
+            color: 'white',
+            // "color-primario": 'white',
+            especial: () => {
+                return 'Guaf guaf';
+            }
+        };
+
+        console.log(perro);
+
+        console.log(perro.especial()); */
+/////////tipos de arrays ///////////////
+
+
+
+
+      /*   const nameList = ['Elliot', 17, true];
+
+        console.log(nameList.length);
+        console.log(nameList.push('Elvis'));
+        console.log(nameList);
+        console.log(nameList.unshift('Fiorella'));
+        console.log(nameList);
+        console.log(nameList.pop());
+        console.log(nameList);
+        console.log(nameList.shift());
+        console.log(nameList); */
+
+        //////////////////// slice   //////////
+
+      /*   const task =['despertar', 'programar', 'comer', 'estafar', 'tonear', 'dormir'];
+        const newArray = task.slice(1,4);
+        console.log(newArray);
+        console.log(task); */
+
+     //////////////////// indexof   y lastindexof   //////////
+
+     const programmingLanguages = ['HTML', 'CSS', 'JavaScript', 'Python', 'Java', 'C++', 'PHP', 'CSS'];
+    console.log(programmingLanguages);
+    console.log(programmingLanguages.indexOf('CSS'));
+    // console.log(programmingLanguages.indexOf('Go'));
+    console.log(programmingLanguages.lastIndexOf('CSS'));
+
+       ////////////////////  find , findindex, some, every  //////////
+
+    const ages = [18, 27, 24, 26, 19, 26];
+    console.log(ages.find(element => element > 25));
+    console.log(ages.findIndex(element => element > 25));
+    console.log(ages.some(element => element < 15));
+    console.log(ages.every(element => element >= 18));
+
+           ////////////////////  includes , search  //////////
+
+    console.log(programmingLanguages.includes('Go'));
+    console.log('No somos libres de las que cosas malas que nos pasan, pero si somos libres de responder ante ellas.'.search('libres'));
+    console.log(programmingLanguages[2].search('Java'));
+
+
+    </script>
+</body>
+</html>
