@@ -1,6 +1,18 @@
 'use strict';
 
-  document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded',()=>{
+const header = document.querySelector('.header');
+document.addEventListener('scroll',()=> {
+  console.log(scrollY);
+  header.classList.toogle('header--scroll',window.scrollY > 0);
+  const nav = document.querySelector('.nav');
+});
+});
+
+
+
+
+/*   document.addEventListener('DOMContentLoaded', () => {
   console.log(document.querySelector('.header'));
   document.addEventListener('scroll', () => {
   header.classList.toogle('header--scroll',window.scrollY>0)
@@ -9,7 +21,7 @@
 });
 
 
-
+ */
 
 
 

@@ -71,6 +71,14 @@
   transform: scale(1);
 }
 
+.img {
+  display: block;
+}
+.img--logo {
+  width: 132.875px;
+  height: 32px;
+}
+
 .container {
   max-width: var(--primary-max-width);
   padding-right: calc(var(--primary-spacing) / 2);
