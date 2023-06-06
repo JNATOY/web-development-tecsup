@@ -4,7 +4,7 @@
   transition: padding 0.25s;
 
   &--scroll {
-    padding-top: calc(var(--primary-spacing) * 0.5);
-    padding-bottom: calc(var(--primary-spacing) * 0.5);
+  padding-top: calc(var(--primary-spacing) * 0.5);
+  padding-bottom: calc(var(--primary-spacing) * 0.5);
   }
 }
