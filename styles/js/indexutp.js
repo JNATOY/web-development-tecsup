@@ -1,9 +1,42 @@
-const firstName = 'juan';
+'use strict';
+
+  document.addEventListener('DOMContentLoaded', () => {
+  console.log(document.querySelector('.header'));
+  document.addEventListener('scroll', () => {
+  header.classList.toogle('header--scroll',window.scrollY>0)
+  const nav = document.querySelector('.nav')
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const firstName = 'juan';
 
 for (const element of firstName) {
   console.log(element);
 }
-
+ */
 
 /* const firstName = 'juan';
 for (const index in firstName) {
