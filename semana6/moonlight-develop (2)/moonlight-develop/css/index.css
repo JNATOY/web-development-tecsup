@@ -163,16 +163,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
   max-width: var(--max-width-container);
   margin: auto;
   padding: var(--padding-container);
 }
 
 .hero__title {
-  font-size: 3rem;
-  white-space: nowrap;
+  position: relative;
+  top: 0%;
+  left: 50%;
   z-index: 5;
-  margin: 0 0 0 45%;
+  font-size: 2.5rem;
+  white-space: nowrap;
 }
 
 .hero__learn-button {
