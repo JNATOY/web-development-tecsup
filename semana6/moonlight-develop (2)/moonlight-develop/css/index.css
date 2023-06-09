@@ -181,9 +181,9 @@
 .hero__learn-button {
   position: absolute;
   z-index: 5;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%, 75%);
+  transform: translate(-50%, 0);
   background-color: var(--button-color);
   border-radius: var(--border-radius);
   color: var(--button-text-color);

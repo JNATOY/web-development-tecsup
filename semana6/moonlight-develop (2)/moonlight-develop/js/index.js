@@ -30,10 +30,12 @@ window.addEventListener('DOMContentLoaded', () => {
     header.classList.toggle('header--scroll', scrollY > 0);
     headerNav.classList.toggle('header-nav--scroll', scrollY > 0);
 
-    heroTitle.style.transform = `translate(-${scrollY}px, ${0})`
-    // heroTitle.style.top = `${scrollY * 0.375}px`;
-    // heroTitle.style.left = `${50 - (scrollY * 0.375)}%`;
-    // heroLearnButton.style.top = `${50 + (scrollY * 0.125)}%`;
+    heroTitle.style.transform = `translate(-${scrollY * 1.25}px, ${scrollY * 0.25}px)`;
+    heroLearnButton.style.transform = `translate(-50%, ${scrollY * 0.25}px)`;
+    heroStarts.style.transform = `translate(0, -${scrollY * 0.15}px)`;
+    heroMoon.style.top = `-${scrollY * 0.5}px)`;
+    heroMountainsBehind.style.transform = `translate(0, ${scrollY * 0.20}px)`;
+    heroMountainsFront.style.transform = `translate(0, ${scrollY * 0.25}px)`;
   });
 
   menuButton.addEventListener('click', openMenu);
