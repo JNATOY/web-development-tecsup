@@ -1,4 +1,5 @@
-const slider = () => {
+/* se tiene que escribir sfc para que salga todo el inicio */
+const slider = () => { 
     let newTestimony;
     const previewArrow = document.querySelector('#previewArrow');
     const nextArrow = document.querySelector('#nextArrow');
