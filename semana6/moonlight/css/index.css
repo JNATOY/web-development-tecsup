@@ -24,8 +24,8 @@
 }
 
 .header {
-  position: fixed;
-  z-index: 100;
+  position: fixed;  /* que su posicion sea fija */
+  z-index: 100;         /* se sobrepone sobre todo */
   top: 0;
   left: 0;
   width: 100%;
@@ -66,33 +66,33 @@
 
 .header-nav__menu-icon-container {
   height: 2rem;
-  cursor: pointer;
+  cursor: pointer;   /* manito sobre icono */
   margin: 0;
 }
 
 .header-nav__menu-icon {
-  fill: var(--text-color);
+  fill: var(--text-color);  /* rellenar color icono */
   height: 100%;
 }
 
-.header-nav__menu-link-list {
+.header-nav__menu-link-list {     /* toda la ul */
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;    /* toda la lista en columna */
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-image: linear-gradient(to top, var(--primary-theme-color), var(--secondary-theme-color));
+  background-image: linear-gradient(to top, var(--primary-theme-color), var(--secondary-theme-color)); /* combinacion o transicion entre dos colores, si es top de abajo hacia arriba */
   margin: 0;
   padding: 0;
-  opacity: 0;
-  pointer-events: none;
+  opacity: 0;                 /* es el grado en que se oculta el contenido detrás de un elemento, 0 hace que la lista desaparezca y solo aparezca cuadno se da click en icono */
+  pointer-events: none;          /* desactiva los eventos de puntero hacer clic, arrastrar, pasar el mouse, etc. (preguntar)*/
   transition: var(--all-transitions);
-  list-style: none;
+  list-style: none;         /* permite establecer todas las propiedades de estilo de lista a la vez */
 }
 
 .header-nav__menu-link-list--open {
@@ -101,7 +101,7 @@
 }
 
 .header-nav__menu-link-item {
-  display: flex;
+  display: flex;    /* se van a poner los links uno al lado del otro , permie agregar mas propiedades */
 }
 
 .header-nav__menu-link {
@@ -113,18 +113,18 @@
   transition: var(--all-transitions);
 }
 
-.header-nav__menu-link--active,
-.header-nav__menu-link:hover {
+.header-nav__menu-link--active,      /* especialmente este va estar resaltado todo el tiempo de fondo blanco */
+.header-nav__menu-link:hover {      /* : hover , permite aplicar un fondo sobre el enlace cuando el mouse pase sobre el */
   background-color: var(--button-color-active);
-  color: var(--button-text-color);
+  color: var(--button-text-color);      /* esto es el color del texto dentro del fondo del enlace */
 }
 
 .header-nav__menu-close-icon-container {
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
-  height: 2rem;
-  cursor: pointer;
+  position: absolute;     /* se salta todo para irse a la parte de arriba del body, en este caso es el boton cerrar */
+  top: 1rem;                     /* boton cerrar */
+  right: 2rem;                   /* boton cerrar */
+  height: 2rem;                  /* boton cerrar */
+  cursor: pointer;               /* boton cerrar */
 }
 
 .header-nav__menu-close-icon {
