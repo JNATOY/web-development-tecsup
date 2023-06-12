@@ -168,7 +168,7 @@
 /* Start header */
 .header {
   position: fixed;
-  z-index: 100;
+  z-index: 100;     /* se pone delante el body , delante de los elementos del body  z-index: 100 */
   top: 0;
   left: 0;
   width: 100%;
