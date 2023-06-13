@@ -29,7 +29,7 @@
                                 <th scope="col">Imagen</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="pokemonTBody">
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Charmander</td>
@@ -60,27 +60,27 @@
                     </table>
                 </section>
                 <section>
-                    <form>
+                    <form name="pokemonForm">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="pokemonName" placeholder="Nombre">
-                            <label for="floatingInput">Nombre</label>
+                            <input type="text" name="name" class="form-control" id="pokemonName" placeholder="Nombre">
+                            <label for="pokemonName">Nombre</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" name="name" class="form-control" id="pokemonType" placeholder="Tipo">
-                            <label for="floatingPassword">Tipo</label>
+                            <input type="text" name="type" class="form-control" id="pokemonType" placeholder="Tipo">
+                            <label for="pokemonType">Tipo</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="url" name="type" class="form-control" id="pokemonImage" placeholder="Imagen">
-                            <label for="floatingPassword">Imagen</label>
+                            <input type="url" name="image" class="form-control" id="pokemonImage" placeholder="Imagen">
+                            <label for="pokemonImage">Imagen</label>
                         </div>
-                        <button type="submit" name="image" class="btn btn-primary btn-lg w-100">Crear</button>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Crear</button>
                         <!-- siempre poner en type "submit" para un formulario -->
                     </form>
                 </section>
             </div>
         </main>
     </header>
-    <script type="module" src="./js/index.js" defer></script>   <!-- el defer hace que espere que todo cargue ( al poner typo : model , por defecto se pone el "use stricti" y el "defer") --> 
+    <script type="module" src="./js/index.js" ></script>   <!-- el defer hace que espere que todo cargue ( al poner typo : model , por defecto se pone el "use stricti" y el "defer") --> 
 </body>
 
 </html>
