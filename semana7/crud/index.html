@@ -2,11 +2,11 @@
 <html lang="es" data-bs-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grud</title>
+    <title>CRUD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -14,73 +14,44 @@
         <div class="container">
             <h1>CRUD</h1>
         </div>
-        <main>
-            <div class="container">
-                <section>
-                    <div>
-                        <h2>Pokemon</h2>
-                    </div class="table-responsive">
-                    <table class="table table table-bordered border-primary ">
+    </header>
+    <main>
+        <div class="container">
+            <h2>Pokémon</h2>
+            <div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Tipo</th>
-                                <th scope="col">Imagen</th>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Imagen</th>
                             </tr>
                         </thead>
-                        <tbody id="pokemonTBody">
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Charmander</td>
-                                <td>
-                                    <span class="badge text-bg-danger">Fuego</span>
-                                </td>
-                                <td>
-                                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="#" height="32" width="32"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Squirtle</td>
-                                <td><span class="badge text-bg-primary">Agua</span></td>
-                                <td>
-                                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="" height="32" width="32">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Bulbasaur</td>
-                                <td><span class="badge text-bg-success">Planta</span></td>
-                                <td>
-                                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="#" height="32" width="32">
-                                </td>
-                            </tr>
-                        </tbody>
+                        <tbody id="pokemonTBody" />
                     </table>
-                </section>
-                <section>
-                    <form name="pokemonForm">
-                        <div class="form-floating mb-3">
-                            <input type="text" name="name" class="form-control" id="pokemonName" placeholder="Nombre">
-                            <label for="pokemonName">Nombre</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" name="type" class="form-control" id="pokemonType" placeholder="Tipo">
-                            <label for="pokemonType">Tipo</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="url" name="image" class="form-control" id="pokemonImage" placeholder="Imagen">
-                            <label for="pokemonImage">Imagen</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Crear</button>
-                        <!-- siempre poner en type "submit" para un formulario -->
-                    </form>
-                </section>
+                </div>
+                <form name="pokemonForm">
+                    <div class="form-floating mb-3">
+                        <input type="text" name="name" class="form-control" id="pokemonName" placeholder="Nombre">
+                        <label for="pokemonName">Nombre</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="type" class="form-control" id="pokemonType" placeholder="Tipo">
+                        <label for="pokemonType">Tipo</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="url" name="image" class="form-control" id="pokemonImage" placeholder="Imagen">
+                        <label for="pokemonImage">Imagen</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Crear</button>
+                    <!-- siempre poner en type "submit" para un formulario -->
+                </form>
             </div>
-        </main>
-    </header>
-    <script type="module" src="./js/index.js" ></script>   <!-- el defer hace que espere que todo cargue ( al poner typo : model , por defecto se pone el "use stricti" y el "defer") --> 
-</body>
-
+        </div>
+    </main>
+    <script type="module" src="./js/index.js" defer></script>
+    <!-- el defer hace que espere que todo cargue ( al poner typo : model , por defecto se pone el "use stricti" y el "defer") -->
+    </body>
 </html>
