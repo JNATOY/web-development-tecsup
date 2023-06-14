@@ -12,14 +12,14 @@
 <body>
     <header>
         <div class="container">
-            <h1>CRUD</h1>
+            <h1 class="text-center">Pokémon</h1>
         </div>
     </header>
     <main>
         <div class="container">
-            <h2>Pokémon</h2>
-            <div>
-                <div class="table-responsive">
+            <h2 class="text-center">CRUD</h2>
+            <div class="row">
+                <div class="col-md-8 table-responsive">
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
@@ -27,12 +27,13 @@
                                 <th>Nombre</th>
                                 <th>Tipo</th>
                                 <th>Imagen</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody id="pokemonTBody" />
                     </table>
                 </div>
-                <form name="pokemonForm">
+                <form name="pokemonForm" class="col-md-4">
                     <div class="form-floating mb-3">
                         <input type="text" name="name" class="form-control" id="pokemonName" placeholder="Nombre">
                         <label for="pokemonName">Nombre</label>
@@ -51,7 +52,15 @@
             </div>
         </div>
     </main>
-    <script type="module" src="./js/index.js" defer></script>
+    <!-- <script type="module" src="./js/index.js" defer></script> -->
     <!-- el defer hace que espere que todo cargue ( al poner typo : model , por defecto se pone el "use stricti" y el "defer") -->
-    </body>
+    <script src="./js/index.js" defer></script>
+</body>
+
 </html>
+
+
+
+<!-- APUNTES -->
+<!-- la funcion que filtra y discrimina es .filter -->
+<!-- en lcoal estore solo se mandan oj¡bjetos -->
