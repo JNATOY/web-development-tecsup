@@ -76,10 +76,51 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     const deletePokemon = (id) => {
-        pokemons = pokemons.filter((_, index) => index !== id);
-        localStorage.setItem('pokemonsCrud', JSON.stringify(pokemons));
-        readPokemons();
+
+        // --------------------------------INICIO DE ALERTA---------------------------------------
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-success mx-1', // porque le puso mx-1 ?
+                cancelButton: 'btn btn-danger mx-1'      // porque le puso mx-1 ?
+            },
+            buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: '¿Estás seguro?',
+            text: "No podrás recuperarlo",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: '¡Sí, elimínalo!',
+            cancelButtonText: 'No, cancélalo!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                //inicio del pokemons.filter devuelve los poquemos de un id diferente del que uno manda
+                pokemons = pokemons.filter((_, index) => index !== id);
+                localStorage.setItem('pokemonsCrud', JSON.stringify(pokemons));
+                readPokemons();
+                //fin del pokemons.filter
+                swalWithBootstrapButtons.fire(
+                    '¡Eliminado!',
+                    'Tu Pokémon ha sido eliminado',
+                    'success'
+                )
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire(
+                    'Cancelado',
+                    'Tu Pokémon está seguro',
+                    'error'
+                );
+            }
+        })
     };
+
+// --------------------------------------FIN DE ALERTA ------------------------------------------------
 
     if (localStorage.getItem('pokemonsCrud')) {
         pokemons = JSON.parse(localStorage.getItem('pokemonsCrud'));
