@@ -1,0 +1,49 @@
+[
+{
+    "name": "Juan Ñato",
+    "year": 34,
+    "birthday": "08/03/1989",
+    "profession": "Ingeniería maritima",
+    "school": "UTP",
+    "reason": "Me gusta la tecnología",
+    "skill": "Junior",
+    "developer": "Frontend",
+    "keywords": "👨‍💻Desarrollador👨‍💻 | 🌌Frontend🌌 | ⚛Html⚛ | 🌐CSS🌐 || 🌐JavaScript🌐 | 💻Autodidacta💻​",
+    "technologies": "Html, CSS, JavaScript",
+    "language": "JavaScript",
+    "location": "Lima, Perú",
+    "description": "Desarrollador Web Frontend / Apasionado del autoaprendizaje y del código limpio.",
+    "expectations": "En el corto plazo aprender todo sobre frontend y backend y aplicaciones móviles",
+    "hobbies": "Escuchar musica, Leer",
+    "github": "JNATOY",
+    "instagram": "jyepez_fit",
+    "photo": "https://i.postimg.cc/tgJZp7D4/Whats-App-Image-2023-05-04-at-6-52-15-PM.jpg"
+},
+
+{
+    "name": "Elliot Garamendi",
+    "year": 27,
+    "birthday": "31/01/1996",
+    "profession": "Ingeniería de Software",
+    "school": "UTP",
+    "reason": "Me gusta la tecnología",
+    "skill": "Junior",
+    "developer": "Frontend",
+    "keywords": "👨‍💻Desarrollador👨‍💻 | 🌌Frontend🌌 | ⚛React⚛ | 🌐Next.js🌐 | 💻Docente💻​",
+    "technologies": "React, Next.js",
+    "language": "JavaScript",
+    "location": "Lima, Perú",
+    "Description": "Desarrollador Web Frontend con React y Next.js. Docente de especialización en Desarrollo Web Frontend. Apasionado del autoaprendizaje y del código limpio.",
+    "expectations": "Aprender mucho de desarrollo Web y que todos terminen",
+    "hobbies": "Investigar",
+    "youtube": "elliotgaramendi",
+    "github": "elliotgaramendi",
+    "linkedin": "elliotgaramendi",
+    "instagram": "elliotgaramendi",
+    "facebook": "elliotgaramendi",
+    "tiktok": "",
+    "photo": "https://i.postimg.cc/pL3zrqqS/elliot-garamendi-perrito.webp",
+    "other": ""
+}
+
+]
