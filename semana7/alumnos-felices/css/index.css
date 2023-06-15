@@ -29,7 +29,6 @@
     margin: 0 auto;
 }
 
-
 .card {
     max-width: 320px;
     box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.5);
@@ -86,6 +85,13 @@
 .icon {
     font-size: 20px;
     color: white;
+}
+
+.g-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-items: center;
+    gap: 1rem;
 }
 
 .d-flex {
