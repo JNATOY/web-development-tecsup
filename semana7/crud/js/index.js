@@ -1,18 +1,22 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', () => {
-    let pokemons;
+    let pokemons = [];
+    let pokemonId = -1;
 
     const pokemonTBody = document.getElementById('pokemonTBody');
     const pokemonForm = document.forms['pokemonForm'];
+    const actionButton = document.getElementById('actionButton'); // 1er paso se agrego para seleccionar el id del html
 
+    //esto es el objeto :  pokemonForm['name'] ; CUANDO SELECCIONO EL FORMULARIO QUIERO OBTENER UN VALOR
+
+const type = pokemonForm['type'].value;
     const createPokemon = (e) => {
-        e.preventDefault();
-        const name = pokemonForm['name'].value;      //esto es el objeto :  pokemonForm['name'] ; CUANDO SELECCIONO EL FORMULARIO QUIERO OBTENER UN VALOR
+        const name = pokemonForm['name'].value;
         const type = pokemonForm['type'].value;
         const image = pokemonForm['image'].value;
-
-        pokemons = [...pokemons, { name, type, image }];    // los tres puntitos quiere decir que va obtener copia de pokemons
+// los tres puntitos quiere decir que va obtener copia de pokemons
+        pokemons = [...pokemons, { name, type, image }];
         localStorage.setItem('pokemonsCrud', JSON.stringify(pokemons));
         readPokemons();
         pokemonForm.reset();
@@ -23,7 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         pokemons.forEach((element, index) => {
             const { name, type, image } = element;
-
             // pokemonTBody.innerHTML += `
             //   <tr>
             //     <td>${index + 1}</td>
@@ -41,51 +44,79 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const tableRow = document.createElement('tr');
 
-            const tableDataId = document.createElement('td');
-            tableDataId.textContent = index + 1;
+            const idTableData = document.createElement('td');
+            idTableData.textContent = index + 1;
 
-            const tableDataName = document.createElement('td');
-            tableDataName.textContent = name;
+            const nameTableData = document.createElement('td');
+            nameTableData.textContent = name;
 
-            const tableDataType = document.createElement('td');
-            tableDataType.textContent = type;
+            const typeTableDataT = document.createElement('td');
+            typeTableDataT.textContent = type;
 
-            const tableDataImage = document.createElement('td');
-            const imgImage = document.createElement('img');
-            imgImage.setAttribute('src', image);
-            imgImage.setAttribute('alt', name);
-            imgImage.setAttribute('width', '64px');
-            imgImage.setAttribute('height', '64px');
-            tableDataImage.appendChild(imgImage);
+            const imageTableData = document.createElement('td');
+            const imageImg = document.createElement('img');
+            imageImg.setAttribute('src', image);
+            imageImg.setAttribute('alt', name);
+            imageImg.setAttribute('width', '64px');
+            imageImg.setAttribute('height', '64px');
+            imageTableData.appendChild(imageImg);
 
-            const tableDataActions = document.createElement('td');
+            const actionsTableData = document.createElement('td');
             const deleteButton = document.createElement('button');
-            deleteButton.className = 'btn btn-outline-danger btn-sm';
+            deleteButton.className = 'btn btn-outline-danger btn-sm p-1 m-1';
             deleteButton.textContent = '🗑';
-            deleteButton.addEventListener('click', () => deletePokemon(index))
-            tableDataActions.appendChild(deleteButton);
+            deleteButton.addEventListener('click', () => deletePokemon(index));
+            const editButton = document.createElement('button');
+            editButton.className = 'btn btn-outline-success btn-sm p-1 m-1';
+            editButton.textContent = '✏';
+            editButton.addEventListener('click', () => readPokemon(index));
+            actionsTableData.appendChild(deleteButton);
+            actionsTableData.appendChild(editButton);
 
-            tableRow.appendChild(tableDataId);
-            tableRow.appendChild(tableDataName);
-            tableRow.appendChild(tableDataType);
-            tableRow.appendChild(tableDataImage);
-            tableRow.appendChild(tableDataActions);
+            tableRow.appendChild(idTableData);
+            tableRow.appendChild(nameTableData);
+            tableRow.appendChild(typeTableDataT);
+            tableRow.appendChild(imageTableData);
+            tableRow.appendChild(actionsTableData);
 
             pokemonTBody.appendChild(tableRow);
         });
     };
+//obtener un pokemon por id
+    const readPokemon = (id) => {
+        pokemonId = id;
+ //2 paso pone la palabra editar cuando se da boton editar
+        actionButton.textContent = 'Editar';
+//si el indice es igual al poqueños id  que mando entonces ese es el pokemon
+        const pokemon = pokemons.find((_, index) => index === id);
+//desestructuro (extraccion de propiedades de un objeto)
+        const { name, type, image } = pokemon;
+        pokemonForm['name'].value = name;
+        pokemonForm['type'].value = type;
+        pokemonForm['image'].value = image;
+    };
 
+    const updatePokemon = () => {
+        const name = pokemonForm['name'].value;
+        const type = pokemonForm['type'].value;
+        const image = pokemonForm['image'].value;
+
+        pokemons = pokemons.map((element, index) => index !== pokemonId ? element : { name, type, image });
+        localStorage.setItem('pokemonsCrud', JSON.stringify(pokemons));
+        readPokemons();
+        pokemonForm.reset();
+        pokemonId = -1;
+        actionButton.textContent = 'Crear';
+    };
+ // --------------------------------INICIO DE ALERTA---------------------------------------
     const deletePokemon = (id) => {
-
-        // --------------------------------INICIO DE ALERTA---------------------------------------
-
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
-                confirmButton: 'btn btn-success mx-1', // porque le puso mx-1 ?
-                cancelButton: 'btn btn-danger mx-1'      // porque le puso mx-1 ?
+                confirmButton: 'btn btn-success mx-1',
+                cancelButton: 'btn btn-danger mx-1'
             },
             buttonsStyling: false
-        })
+        });
 
         swalWithBootstrapButtons.fire({
             title: '¿Estás seguro?',
@@ -93,24 +124,21 @@ window.addEventListener('DOMContentLoaded', () => {
             icon: 'warning',
             showCancelButton: true,
             confirmButtonText: '¡Sí, elimínalo!',
-            cancelButtonText: 'No, cancélalo!',
+            cancelButtonText: '¡No, cancélalo!',
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
-                //inicio del pokemons.filter devuelve los poquemos de un id diferente del que uno manda
+//inicio del pokemons.filter devuelve los poquemos de un id diferente del que uno manda
                 pokemons = pokemons.filter((_, index) => index !== id);
                 localStorage.setItem('pokemonsCrud', JSON.stringify(pokemons));
                 readPokemons();
-                //fin del pokemons.filter
+//fin del pokemons.filter
                 swalWithBootstrapButtons.fire(
                     '¡Eliminado!',
                     'Tu Pokémon ha sido eliminado',
                     'success'
-                )
-            } else if (
-                /* Read more about handling dismissals below */
-                result.dismiss === Swal.DismissReason.cancel
-            ) {
+                );
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
                 swalWithBootstrapButtons.fire(
                     'Cancelado',
                     'Tu Pokémon está seguro',
@@ -119,9 +147,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         })
     };
-
 // --------------------------------------FIN DE ALERTA ------------------------------------------------
-
     if (localStorage.getItem('pokemonsCrud')) {
         pokemons = JSON.parse(localStorage.getItem('pokemonsCrud'));
     } else {
@@ -133,9 +159,15 @@ window.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('pokemonsCrud', JSON.stringify(pokemons));
     }
 
-    pokemonForm.addEventListener('submit', createPokemon);
+    pokemonForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+// eso es para permitir crear id cuando es diferente de -1 , nunca va poder ser -1
+        pokemonId === -1 ? createPokemon() : updatePokemon();
+    });
     readPokemons();
 });
+
+
 
 // window.addEventListener('DOMContentLoaded', () => {   /* DESPUES QUE CARGA EL DOM EJECUTA  EL CONSOLE */
 /* console.log(document.forms['pokemonForm']);         /* BUSCA EN TODO EL DOM FORMULARIOS QUE TENGAN EL NAME POKEMON FORM */
