@@ -3,9 +3,9 @@ import { fetchApi, renderCard } from "../utils/util.js";
 const card = async () => {
   const pokemonLocal = document.getElementById('pokemonLocal');
   const pokemonRemote = document.getElementById('pokemonRemote');
-  
+
   const [localData, remoteData] = await fetchApi('https://elliotgaramendi.github.io/api/json/pokeapi-api-v2-pokemon-25.json', 'https://pokeapi.co/api/v2/pokemon/25');
-  
+
   renderCard(pokemonLocal, localData);
   renderCard(pokemonRemote, remoteData);
 
