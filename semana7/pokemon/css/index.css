@@ -1,12 +1,10 @@
 .body {
     min-height: 100vh;
     margin: 0;
-    background-image: url('https://i.postimg.cc/xdft1D15/wp1929849.jpg');
+    background-image: url('https://i.postimg.cc/x9MyhM3D/react-system.webp');
     background-size: cover;
-    /* abarque todo el ancho */
     background-position: center;
     background-attachment: fixed;
-    /* para que la imagen este fija aun exista scrroll */
     color: white;
     font-family: monospace;
 }
@@ -25,19 +23,21 @@
 .container {
     max-width: 1024px;
     padding-left: 1rem;
-    padding-left: 1rem;
+    padding-right: 1rem;
     margin: 0 auto;
 }
 
 .card {
-    max-width: 320px;
+    /* max-width: 320px; */
     box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.5);
     border-radius: 16px;
     overflow: hidden;
 }
 
 .card__body {
+    height: 100%;
     padding: 16px;
+    box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(32px);
     display: flex;
@@ -89,9 +89,10 @@
 
 .g-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));   /* min un 320px maximo 1fr */
-    justify-items: center;
-    gap: 1rem;
+}
+
+.g-layout--auto-fit-card {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .d-flex {

@@ -4,7 +4,7 @@
 //.foreach es cada elemento de la colección
 
 window.addEventListener('DOMContentLoaded', () => {
-    fetch('https://.github.io/web-development-tecsup/g21/semana7/alumnos-felices/json/students.json')
+    fetch('https://raw.githubusercontent.com/JNATOY/web-development-tecsup/main/semana7/alumnos-felices/json/alumnos.json')
         .then(response => response.json())
         .then(data => {
             const studentCards = document.getElementById('studentCards');
