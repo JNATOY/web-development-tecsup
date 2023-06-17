@@ -3,7 +3,7 @@ const cards = () => {
   const pokemonRemote = document.getElementById('pokemonRemote');
 
   const readPokemon = async () => {
-    const response = await fetch('https://elliotgaramendi.github.io/web-development-tecsup/g21/semana7/apimones/json/pokeapi-api-v2-pokemon-25.json');
+    const response = await fetch('https://raw.githubusercontent.com/JNATOY/web-development-tecsup/main/semana7/apimones-enclase/json/pokeapi-api-v2-pokemon-25.json');
     const pokemon = await response.json();
     pokemonLocal.insertAdjacentHTML('beforeend', `
       <div class="pokemon__card">
