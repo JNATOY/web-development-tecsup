@@ -14,9 +14,6 @@ const header = () => {
         headerNavMenuLinkList.classList.remove('header-nav__menu-link-list--open');
     };
 
-
-    // INICIO SCROLL ingresando la barra scroll , para que al subir desaparezca y al bajar se muestre el header
-
     window.addEventListener('scroll', () => {
         header.classList.toggle('header--scroll', window.scrollY > 0);
         headerNav.classList.toggle('header-nav--scroll', window.scrollY > 0);
