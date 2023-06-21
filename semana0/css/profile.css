@@ -17,6 +17,7 @@
   background-size: cover;
   background-position: center;
   min-height: 100vh;
+  height: 6rem;
   overflow: hidden;
 }
 

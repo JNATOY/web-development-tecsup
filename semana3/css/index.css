@@ -72,7 +72,7 @@
     /* box-shadow: -0.25rem -0.25rem 1rem 0.25rem #149eca, 0.25rem 5px 1rem 0.25rem #388f7f; */
     box-shadow: -0.25rem -0.25rem 1rem 0.25rem rgba(241, 243, 245, 0.8), 0.25rem 5px 1rem 0.25rem var(--primary-main-color);
   }
-  
+
   @media (min-width: 768px) {
     .img--hero {
       width: 320px;
