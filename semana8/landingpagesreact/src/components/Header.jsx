@@ -1,42 +1,57 @@
+import { useRef } from 'react';
 import logoElliotGaramendi from '../assets/img/perfil.png';
 
-const Header = ({ routeLinks }) => {
+const Header = ({ routeLinks, socialNetworks }) => {
+
+    const offCanvas = useRef();
+
+    const openMenu = () => {
+        offCanvas.current.classList.add('off-canvas--show');
+    }
+
     return (
         <header className="header">
             <nav className="nav">
                 <div className="container flexbox flexbox--header">
-                    <img src={logoElliotGaramendi} alt="Logo de Elliot Garamendi" width={48} height={48} className="img img--logo" />
+                    <a href="#hero">
+                        <img src={logoElliotGaramendi} alt="Logo de Elliot Garamendi" width={48} height={48} className="img img--logo" />
+                    </a>
+                    <div
+                        ref={offCanvas}
+                        className="off-canvas off-canvas--right"
+                    >
+                        <div className="off-canvas__child">
+                            <ul className="list flexbox flexbox--responsive gap-4xs">
+                                {routeLinks.map((element, index) => {
+                                    const { href, title, content } = element;
+                                    return (
+                                        <li key={index}>
+                                            <a href={href} title={title} className="link">{content}</a>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                    </div>
                     <ul className="list flexbox flexbox--responsive gap-4xs">
-                        {routeLinks.map((element, index) => {
+                        {socialNetworks.map((element, index) => {
                             const { href, title, content } = element;
                             return (
                                 <li key={index}>
-                                    <a href={href} title={title} className="link">{content}</a>
+                                    <a
+                                        href={href}
+                                        title={title}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="link"
+                                        dangerouslySetInnerHTML={{ __html: content }}
+                                    />
                                 </li>
                             );
                         })}
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="https://www.youtube.com/@elliotgaramendi" target="_blank" rel="noopener noreferrer">
-                                <i className="bi bi-youtube"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/elliotgaramendi" target="_blank" rel="noopener noreferrer">
-                                <i className="bi bi-github"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/elliotgaramendi/" target="_blank" rel="noopener noreferrer">
-                                <i className="bi bi-linkedin"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/elliotgaramendi/" target="_blank" rel="noopener noreferrer">
-                                <i className="bi bi-instagram"></i>
-                            </a>
-                        </li>
+                        <button onClick={openMenu}>
+                            <i className="bi bi-list"></i>
+                        </button>
                     </ul>
                 </div>
             </nav>
