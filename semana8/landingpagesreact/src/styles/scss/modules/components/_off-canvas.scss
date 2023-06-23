@@ -36,8 +36,12 @@
             all: unset;
             --off-canvas-child-movement: 0;
 
-            .off-canvas__child {
+            & .off-canvas__child {
                 all: unset;
+            }
+
+            & .off-canvas__close {
+                display: none;
             }
         }
     }
@@ -53,7 +57,6 @@
     }
 
     &__close {
-        all: unset;
         position: absolute;
     }
 }

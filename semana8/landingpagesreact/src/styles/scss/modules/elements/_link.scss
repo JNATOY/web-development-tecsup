@@ -5,6 +5,10 @@
     font-weight: 600;
     transition: color 0.25s;
 
+    &--lg {
+        font-size: 1.125rem;
+    }
+
     &:hover {
         color: var(--primary-theme-color);
     }

@@ -40,7 +40,7 @@ const Header = ({ routeLinks, socialNetworks }) => {
                             </ul>
                         </div>
                     </div>
-                    <ul className="list flexbox flexbox--responsive gap-4xs">
+                    <ul className="list d-flex a-items-center gap-4xs">
                         {socialNetworks.map((element, index) => {
                             const { href, title, content } = element;
                             return (
@@ -50,13 +50,13 @@ const Header = ({ routeLinks, socialNetworks }) => {
                                         title={title}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="link"
+                                        className="link link--lg"
                                         dangerouslySetInnerHTML={{ __html: content }}
                                     />
                                 </li>
                             );
                         })}
-                        <button onClick={openMenu}>
+                        <button onClick={openMenu} className="icon md:d-none">
                             <i className="bi bi-list"></i>
                         </button>
                     </ul>

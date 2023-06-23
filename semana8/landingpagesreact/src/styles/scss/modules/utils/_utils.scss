@@ -2,6 +2,14 @@
     height: 100%;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.a-items-center {
+    align-items: center;
+}
+
 .gap-6xs {
     gap: calc(var(--primary-element-spacing) * 0.125);
 }
@@ -32,4 +40,10 @@
 
 .gap-md {
     gap: var(--primary-element-spacing);
+}
+
+@media (min-width: 768px) {
+    .md\:d-none {
+        display: none;
+    }
 }
