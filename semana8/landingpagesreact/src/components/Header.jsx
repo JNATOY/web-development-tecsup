@@ -7,7 +7,11 @@ const Header = ({ routeLinks, socialNetworks }) => {
 
     const openMenu = () => {
         offCanvas.current.classList.add('off-canvas--show');
-    }
+    };
+
+    const closeMenu = () => {
+        offCanvas.current.classList.remove('off-canvas--show');
+    };
 
     return (
         <header className="header">
@@ -16,12 +20,15 @@ const Header = ({ routeLinks, socialNetworks }) => {
                     <a href="#hero">
                         <img src={logoElliotGaramendi} alt="Logo de Elliot Garamendi" width={48} height={48} className="img img--logo" />
                     </a>
-                    <div
-                        ref={offCanvas}
-                        className="off-canvas off-canvas--right"
-                    >
+                    <div ref={offCanvas} className="off-canvas off-canvas--right off-canvas--mobile">
                         <div className="off-canvas__child">
-                            <ul className="list flexbox flexbox--responsive gap-4xs">
+                            <button
+                                className="off-canvas__close icon"
+                                onClick={closeMenu}
+                            >
+                                <i className="bi bi-x"></i>
+                            </button>
+                            <ul className="list flexbox flexbox--center flexbox--responsive h-100 gap-4xs">
                                 {routeLinks.map((element, index) => {
                                     const { href, title, content } = element;
                                     return (
