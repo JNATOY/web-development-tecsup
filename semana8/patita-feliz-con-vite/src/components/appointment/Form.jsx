@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Form = () => {
     const [appointmentForm, setAppointmentForm] = useState({});
-    const [appointment, setAppointment] = useState({});
+    const [appointments, setAppointments] = useState([]);
 
     const handleFormInput = (e) => {
         setAppointmentForm({
@@ -13,7 +13,10 @@ const Form = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        setAppointment(appointmentForm);
+        setAppointment([
+            ...appointments,
+            appointmentForm
+        ]);x|x|x|
     };
 
     return (
