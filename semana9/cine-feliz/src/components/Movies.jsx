@@ -61,11 +61,27 @@ const Movies = () => {
 export default Movies;
 
 
-/* USEEFECT EJECUTA CODIGO UAN VEZC ARGU EL DOCUMENTO
+/*
+
+temas:
+1.fechin de datos
+2.manejo de estado
+3.ciclo de vida del componente
+4.renderizado de informacion del estado
+5compaginado
+
+****
+USEEFECT EJECUTA CODIGO UAN VEZC ARGU EL DOCUMENTO
 
 EFTCHAPI ES UNA FUNCION ASINTONA
 
 AWAIT : ESPERO LA RESPUESTA
 
 MOVIES.RESULTS ES UN ARRIVE
+
+useeffect dice que se cambia page vuelve a ejecutar la funcion
+
+puedo hacer inspeccion/components/movies /desplego state
+
+
  */
