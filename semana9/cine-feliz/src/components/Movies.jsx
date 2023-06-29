@@ -29,7 +29,7 @@ const Movies = () => {
 
     useEffect(() => {
         const fetchApi = async () => {
-            const url = `https://api.themoviedb.org/3/discover/movie?page=${page}`
+            const url = `https://api.themoviedb.org/3/discover/movie?language=es-ES&page=${page}`
             const options = {
                 method: 'GET',
                 headers: {
@@ -100,4 +100,4 @@ useeffect dice que se cambia page vuelve a ejecutar la funcion
 puedo hacer inspeccion/components/movies /desplego state
 
 
- */
+*/
