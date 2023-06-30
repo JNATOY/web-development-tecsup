@@ -1,6 +1,6 @@
 const Hero = () => {
     return (
-        <section className="relative h-[100vh] flex items-center justify-center">
+        <section className="relative h-[75vh] flex items-center justify-center">
             <img
                 src="https://images3.alphacoders.com/812/812062.png"
                 alt="Fondo de Rick y Morty"
