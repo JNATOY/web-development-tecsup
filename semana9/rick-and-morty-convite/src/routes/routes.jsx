@@ -1,30 +1,35 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import PrimaryLayout from "../layouts/primaryLayout";
-import NotFound from "../pages/NotFound";
+import CharactersPage from "../pages/CharactersPage";
+import NotFoundPage from "../pages/NotFoundPage";
+import { readCharacters } from "../services/charactersService";
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <PrimaryLayout />,
-        errorElement: <NotFound />,
+        errorElement: <NotFoundPage />,
         children: [
             {
                 index: true,
                 element: <App />
             },
             {
-                path: '/personajes',
-                element: <h1 style={{ padding: '5rem' }}>Personajes</h1>
+                path: 'personajes',
+                element: <CharactersPage />,
+                loader: readCharacters
             },
             {
-                path: '/ubicaciones',
+                path: 'ubicaciones',
                 element: <h1 style={{ padding: '5rem' }}>Ubicaciones</h1>
             },
             {
-                path: '/episodios',
+                path: 'episodios',
                 element: <h1 style={{ padding: '5rem' }}>Episodios</h1>
             }
         ]
     },
 ]);
+
+/* leer sobre el router https://bluuweb.dev/05-react/05-router-v64.html */
