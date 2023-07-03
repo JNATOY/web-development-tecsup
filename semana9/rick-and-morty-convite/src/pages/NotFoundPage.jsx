@@ -16,7 +16,6 @@ const NotFoundPage = () => {
 
 export default NotFoundPage;
 
-
 /* a las etiquetas a se le puso la etiqueta link para el ruteo
 
 usar esta guia https://bluuweb.dev/*/
