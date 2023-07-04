@@ -39,5 +39,4 @@ export const router = createBrowserRouter([
         ]
     }
 ]);
-
 /* leer sobre el router https://bluuweb.dev/05-react/05-router-v64.html */

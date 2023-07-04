@@ -5,12 +5,11 @@ import Hero from './components/Hero';
 
 function App() {
   const data = useLoaderData();
-  console.log(data);
 
   return (
     <>
       <Hero />
-      <Categories />
+      <Categories data={data} />
     </>
   )
 }
