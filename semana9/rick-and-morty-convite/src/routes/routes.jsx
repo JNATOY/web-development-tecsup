@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import PrimaryLayout from "../layouts/primaryLayout";
+import CharacterPage from "../pages/CharacterPage";
 import CharactersPage from "../pages/CharactersPage";
 import NotFoundPage from "../pages/NotFoundPage";
-import { readCharacters } from "../services/charactersService";
+import { readCharacter, readCharacters } from "../services/charactersService";
 
 export const router = createBrowserRouter([
     {
@@ -21,6 +22,11 @@ export const router = createBrowserRouter([
                 loader: readCharacters
             },
             {
+                path: 'personajes/:id',
+                element: <CharacterPage />,
+                loader: readCharacter
+            },
+            {
                 path: 'ubicaciones',
                 element: <h1 style={{ padding: '5rem' }}>Ubicaciones</h1>
             },
@@ -31,5 +37,6 @@ export const router = createBrowserRouter([
         ]
     },
 ]);
+
 
 /* leer sobre el router https://bluuweb.dev/05-react/05-router-v64.html */
