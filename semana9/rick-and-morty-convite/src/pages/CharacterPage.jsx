@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 const CharacterPage = () => {
     const data = useLoaderData();
-    const { created, gender, id, image, location, name, origin, species, status, type } = data;
+    const { created, gender, image, location, name, origin, species, status, type } = data;
 
     return (
         <section className="py-20">
