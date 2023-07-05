@@ -6,6 +6,10 @@ import CharactersPage from "../pages/CharactersPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import { readCharacter, readCharacters } from "../services/charactersService";
 import { readCategories } from "../services/homepageService";
+import LocationsPage from "../pages/LocationsPage";
+import { readLocations } from "../services/LocationsService";
+import EpisodesPages from "../pages/EpisodesPages";
+import { readEpisodes } from "../services/EpisodesService";
 
 export const router = createBrowserRouter([
     {
@@ -30,13 +34,16 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'ubicaciones',
-                element: <h1 style={{ padding: '5rem' }}>Ubicaciones</h1>
+                element: <LocationsPage />,
+                loader: readLocations
             },
             {
                 path: 'episodios',
-                element: <h1 style={{ padding: '5rem' }}>Episodios</h1>
+                element: <EpisodesPages />,
+                loader: readEpisodes
             }
         ]
     }
 ]);
+
 /* leer sobre el router https://bluuweb.dev/05-react/05-router-v64.html */

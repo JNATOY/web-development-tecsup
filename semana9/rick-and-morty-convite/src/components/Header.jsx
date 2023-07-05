@@ -46,7 +46,6 @@ const Header = () => {
 };
 
 export default Header;
-
 /*
 w-12 quiere decir 48 px
 
