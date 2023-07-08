@@ -1,11 +1,11 @@
 import useCounter from "../hooks/useCounter";
 
 const CounterValue = () => {
-    const { value } = useCounter();
+  const { value } = useCounter();
 
-    return (
-        <span>{value}</span>
-    );
+  return (
+    <span>{value}</span>
+  );
 }
 
 export default CounterValue;
